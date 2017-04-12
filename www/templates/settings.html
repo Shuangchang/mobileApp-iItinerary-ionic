@@ -1,0 +1,29 @@
+<!--<ion-view title="Settings" id="page7">-->
+
+    <!--<ion-content style="background: url(img/kJTXY14hSH6hfyeg7gD7_blue-wall-abstract-mobile-wallpaper-1080x1920-4648-1409390488.jpg) no-repeat center;background-size:cover;" class="has-header" animation="slide-right-left-ios7">-->
+
+        <!--<div class="button-bar">-->
+          <!--<a ui-sref="profile" id="settings-button19" class="button button-positive  button-block">Profile</a>-->
+            <!--<button id="settings-button20" class="button button-positive  button-block">Trips</button>-->
+            <!--<a ui-sref="social" id="settings-button21" class="button button-positive  button-block">Social</a>-->
+        <!--</div>-->
+
+      <ion-tabs class="tabs-stable tabs-icon-top tabs-color-active-positive">
+
+        <ion-tab title="Profile" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline"  href="#/settings/profile">
+          <ion-nav-view name="profile" ng-controller="profileCtrl"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="Archive" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline" href="#/settings/trips">
+          <ion-nav-view name="archive"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="Social" icon-on="ion-ios-people" icon-off="ion-ios-people-outline" href="#/settings/social">
+          <ion-nav-view name="social"></ion-nav-view>
+        </ion-tab>
+        <!--<ion-view title="Detail" name="settings"></ion-view>-->
+        </ion-tabs>
+    <!--</ion-content>-->
+
+<!--</ion-view>-->
+

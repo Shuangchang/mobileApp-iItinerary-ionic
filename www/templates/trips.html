@@ -1,0 +1,30 @@
+<ion-view title="Trips" id="page3" hide-nav-bar="true">
+  <ion-header-bar align-title="left" class="bar-stable">
+    <a class="button button-icon icon-left ion-home" ui-sref="settings.profile" id="trips-button11"></a>
+
+    <h1 class="title" style="text-align: center">Trips</h1>
+    <ion-button class="button button-clear button-positive" ng-controller="loginCtrl" ng-click="logout()">Log out</ion-button>
+  </ion-header-bar>
+    <ion-content  padding="false" style="background: url(img/mGVI20iAS1K6nGiFWq9V_blue-wall-abstract-mobile-wallpaper-1080x1920-4648-1409390488.jpg) no-repeat center;background-size:cover;" >
+      <!--<a ui-sref="settings" id="trips-button11" style="text-align:left;" class="button button-positive  button-full button-icon icon-left ion-ios-drag"></a>-->
+        <div class="spacer" style="width: 303px; height: 50px;"></div>
+       <p class="tripDetail">click add button to create your itinerary<br>click itinerary to add events</p>
+        <!--<a ui-sref="addNewTrip" id="trips-button12" style="text-align:left;" class="button button-assertive button-large button-full button-icon icon-right ion-ios-plus"></a>-->
+      <ion-button class="button button-assertive button-large button-icon icon-right ion-plus-circled" ng-click="showPopup()" ng-controller="PopupCtrl"></ion-button>
+
+     <div ng-controller="displayCtrl" ng-init="select()">
+      <ion-button class="button button-assertive button-large button-icon icon-right ion-refresh"  ng-click="select()" ></ion-button>
+      <ion-list>
+            <ion-item class="item-remove-animate" ng-repeat="a in dbData.trips" ng-click="pass(a.tTitle)" href="/#/Events/{{a.tTitle}}" ui-sref="events({tTitle:a.tTitle})">
+              <h2>{{a.tTitle}}</h2><p>Date: {{a.tDate | date: "MM-dd-yyyy"}}<br>Destination: {{a.tDestination}}</p>
+
+              <ion-option-button class="button-icon button-large ion-minus-circled" ng-click="onItemDelete(a)">
+              </ion-option-button>
+
+            </ion-item>
+
+        </ion-list></div>
+
+    </ion-content>
+</ion-view>
+

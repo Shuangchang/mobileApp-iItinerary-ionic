@@ -1,0 +1,20 @@
+
+  <div ng-controller="newFriendCtrl">
+  <ion-list>
+    <ion-checkbox class="list" ng-repeat="chat in chats" ng-model="chat.checked"
+                  ng-checked="chat.checked" type="item-text-wrap">
+      <!--<div style="float: left">-->
+      <h2>{{chat.name}}</h2>
+      <p>{{chat.phone}}</p>
+        <!--</div>-->
+      <!--<label style="float: right"class="checkbox">-->
+      <!--<input type="checkbox" ng-click="clickItem(chat); $event.stopPropagation();" ng-model="item.checked">-->
+        <!--</label>-->
+      <!--<ion-option-button class="button-icon button-large ion-minus-circled" ng-click="onItemDelete(a)">-->
+      <!--</ion-option-button>-->
+      </ion-checkbox>
+    </ion-checkbox>
+
+  </ion-list>
+  </div>
+

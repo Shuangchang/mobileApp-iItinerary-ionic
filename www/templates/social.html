@@ -1,0 +1,33 @@
+<ion-view title="social" id="page10" hide-nav-bar="true">
+  <ion-header-bar align-title="left" class="bar-stable">
+    <ion-button class="button button-clear button-icon ion-navicon button-positive" ui-sref="trips"></ion-button>
+    <h1 class="title" style="text-align: center">Social</h1>
+    <ion-button class="button button-clear button-positive" ng-controller="loginCtrl" ng-click="logout()">Log out</ion-button>
+  </ion-header-bar>
+  <ion-content padding="true" style="background: url(img/kJTXY14hSH6hfyeg7gD7_blue-wall-abstract-mobile-wallpaper-1080x1920-4648-1409390488.jpg) no-repeat center;background-size:cover;">
+    <ion-list>
+            <ion-item class="item-thumbnail-left" ng-repeat="chat in chats" type="item-text-wrap" href="tel:">
+                <img ng-src="{{chat.face}}">
+                <h2>{{chat.name}}</h2>
+                <p>{{chat.phone}}</p>
+
+              <ion-option-button class="button-icon button-large ion-minus-circled" ng-click="onItemDelete(a)">
+              </ion-option-button>
+            </ion-item>
+            <!--<ion-item class="item-thumbnail-left" href="tel:">-->
+                <!--<img>-->
+                <!--<h2>friend 2</h2>-->
+                <!--<p>phone number</p>-->
+            <!--</ion-item>-->
+        </ion-list>
+        <ion-button class="button button-assertive button-large button-icon icon-right ion-plus-circled"  ng-click="getContacts()" ></ion-button>
+        <p class="tripDetail">not able to access device contact</p>
+        <!--<a ui-sref="newFriend" id="social-button7" style="text-align:right;" class="button button-assertive button-large button-block button-clear icon-right ion-ios-plus-outline"></a>-->
+        <ion-list ng-show="phoneContacts">
+          <ion-item ng-repeat="contact in phoneContacts">
+            {{contact.name.formatted}}<br>
+            <ul><li ng-repeat="number in contact.phoneNumbers">{{ number.value }}</li></ul>
+          </ion-item>
+        </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,20 @@
+.popup {
+  width: 90%;
+  height: 60%;
+}
+
+.platform-ios .manual-ios-statusbar-padding{
+  padding-top:20px;
+}
+.manual-remove-top-padding{
+  padding-top:0px;
+}
+.manual-remove-top-padding .scroll{
+  padding-top:0px !important;
+}
+.tripDetail{
+  color: #FFFFFF;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}

@@ -1,0 +1,26 @@
+<ion-view title="Signup" id="page12">
+    <ion-content padding="false" style="background: url(img/OaA0OXcoRtC98l8AUkAg_blue-wall-abstract-mobile-wallpaper-1080x1920-4648-1409390488.jpg) no-repeat center;background-size:cover;" class="has-header">
+        <form class="list" ng-controller="signupCtrl">
+            <div class="spacer" style="width: 303px; height: 50px;"></div>
+            <ion-list>
+                <label class="item item-input" name="username">
+                    <!--<span class="input-label">username</span>-->
+                    <input type="text" placeholder="username" ng-model="inputuser">
+                </label>
+                <label class="item item-input" name="email">
+                    <!--<span class="input-label">email</span>-->
+                    <input type="email" placeholder="email" ng-model="inputemail">
+                </label>
+                <label class="item item-input" name="password">
+                    <!--<span class="input-label">password</span>-->
+                    <input type="password" placeholder="password" ng-model="inputpassword">
+                </label>
+                <label class="item item-input" name="phone">
+                <!--<span class="input-label">password</span>-->
+                <input type="tel" placeholder="phone number" ng-model="inputphone">
+              </label>
+            </ion-list>
+            <a ui-sref="settings.profile" id="signup-button9" class="button button-stable  button-block" ng-controller="signupCtrl" ng-click="insert()">Sign up</a>
+        </form>
+    </ion-content>
+</ion-view>

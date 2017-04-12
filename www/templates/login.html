@@ -1,0 +1,25 @@
+<ion-view title="Login" id="page2">
+    <ion-content padding="false" style="background: url(img/tKG7StjQ7ue74h4QoYG4_blue-wall-abstract-mobile-wallpaper-1080x1920-4648-1409390488.jpg) no-repeat center;background-size:cover;" class="has-header">
+        <form class="list" ng-submit="doLogin()">
+            <div class="spacer" style="width: 303px; height: 100px;"></div>
+          <p class="tripDetail">first time user please create an account</p>
+            <ion-list>
+                <label class="item item-input" name="username">
+                    <!--<span class="input-label">email</span>-->
+                    <input type="text" placeholder="username" ng-model="loginData.username">
+                </label>
+                <label class="item item-input" name="password">
+                    <!--<span class="input-label">password</span>-->
+                    <input type="password" placeholder="password" ng-model="loginData.password">
+                </label>
+            </ion-list>
+            <div class="spacer" style="width: 303px; height: 59px;"></div>
+          <button id="login-button5" class="button button-stable  button-full" type="submit">Log in</button>
+
+          <!--<a ui-sref="trips" id="login-button5" class="button button-stable  button-full" type="submit">Log in</a>-->
+          <a ui-sref="signup" id="login-button6" class="button button-positive  button-full button-clear">Or create an account</a>
+
+          <!--<a href="#" onclick="window.open('/signup', '_system', 'location=yes'); return false;" id="login-button6" class="button button-positive  button-full button-clear">Or create an account</a>-->
+        </form>
+    </ion-content>
+</ion-view>

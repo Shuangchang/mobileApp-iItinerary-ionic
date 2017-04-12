@@ -1,0 +1,31 @@
+<ion-view title="profile" id="page8" hide-nav-bar="true">
+  <ion-header-bar align-title="left" class="bar-stable">
+    <ion-button class="button button-clear button-icon ion-navicon button-positive" ui-sref="trips"></ion-button>
+    <h1 class="title" style="text-align: center">Profile</h1>
+    <ion-button class="button button-clear button-positive" ng-controller="loginCtrl" ng-click="logout()">Log out</ion-button>
+  </ion-header-bar>
+  <ion-content padding="true" ng-controller = "profileCtrl" ng-init="select()" style="background: url(img/kJTXY14hSH6hfyeg7gD7_blue-wall-abstract-mobile-wallpaper-1080x1920-4648-1409390488.jpg) no-repeat center;background-size:cover;">
+        <form class="list" >
+            <div style="margin: 0px; line-height: 250px; border: 1px solid rgb(238, 238, 238); border-radius: 3px; text-align: center; background-color: rgb(255, 255, 255);">
+                <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+            </div>
+            <label class="item item-input" name="username">
+                <!--<span class="input-label">username</span>-->
+                <input type="text" placeholder="username" ng-model="username" ng-disabled="username">
+            </label>
+            <label class="item item-input" name="email">
+                <!--<span class="input-label">email</span>-->
+                <input type="email" placeholder="email" ng-model="useremail">
+            </label>
+            <label class="item item-input" name="password">
+                <!--<span class="input-label">password</span>-->
+                <input type="password" placeholder="password" ng-model="userpassword">
+            </label>
+            <label class="item item-input" name="phone">
+                <!--<span class="input-label">phone number</span>-->
+                <input type="tel" placeholder="phone number" ng-model="userphone">
+            </label>
+        </form>
+    <a class="button button-stable  button-block" ng-click="modify(username)">Edit</a>
+  </ion-content>
+</ion-view>

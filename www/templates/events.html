@@ -1,0 +1,38 @@
+<ion-view title="Events" id="page5" hide-nav-bar="true">
+    <ion-header-bar align-title="left" class="bar-stable">
+    <ion-button class="button button-clear ion-chevron-left button-positive" ui-sref="trips" animation="slide-left-right-ios7"></ion-button>
+    <h1 class="title" style="text-align: center">Events</h1>
+    <ion-button class="button button-clear button-positive" ng-controller="loginCtrl" ng-click="logout()">Log out</ion-button>
+    </ion-header-bar>
+
+    <ion-content padding="false" ng-controller="eventsCtrl" ng-model="sTrip" ng-init="select(sTrip)" style="background: url(img/7v5T342WR1qqUT2r7yaV_blue-wall-abstract-mobile-wallpaper-1080x1920-4648-1409390488.jpg) no-repeat center;background-size:cover;" >
+        <!--<a ui-sref="trips" id="events-button15" style="text-align:left;" class="button button-positive  button-full button-icon icon-left ion-ios-arrow-back"></a>-->
+       <div class="spacer" style="width: 303px; height: 20px;"></div>
+        <h3 id="events-heading1" style="color:#FFFFFF;text-align:center;">{{sTrip}}</h3>
+        <p class="tripDetail" ng-model="tripDate">{{tripDate|date:"MM-dd-yyyy"}}</p>
+        <p class="tripDetail" ng-model="tripDestination">{{tripDestination}}<br>
+        please press the refresh button to see added events
+        </p>
+
+
+
+      <div class="spacer" style="width: 303px; height: 20px;"></div>
+        <!--<a ui-sref="addNewEvent" id="events-button16" class="button button-positive button-large button-full button-icon icon-right ion-ios-plus"></a>-->
+      <ion-button class="button button-assertive button-large button-icon icon-right ion-plus-circled" ng-click="showPopup(sTrip)" ng-controller="PopupCtrl2"></ion-button>
+      <ion-button class="button button-assertive button-large button-icon icon-right ion-refresh"  ng-click="select(sTrip)" ></ion-button>
+      <ion-list>
+            <ion-item ng-repeat="a in dbData.Events">{{a.tEvent}}<p>Date: {{a.tDate|date:"MM-dd-yyyy"}}<br>Time: {{a.tTime}}<br>Location: {{a.tLocation}}</p> <ion-option-button class="button-icon button-large ion-minus-circled" ng-click="onItemDelete(a)">
+            </ion-option-button></ion-item>
+
+      </ion-list>
+      <ion-toggle toggle-class="toggle-positive" ng-controller="notificationCtrl" ng-model="pushNotification.checked" ng-change="pushNotificationChange()">Notification</ion-toggle>
+      <div ng-controller="newFriendCtrl">
+        <button id="addNewTrip-button13" style="text-align:left" class="button button-light button-full button-icon-large ion-ios-personadd" ng-click="socialPopup()"> Add participant</button>
+        <ion-list>
+          <ion-item ng-repeat="a in data">{{a.name}} {{a.phone}}<ion-option-button class="button-icon button-large ion-minus-circled" ng-click="onItemDelete(a)">
+          </ion-option-button></ion-item>
+        </ion-list>
+
+      </div>
+    </ion-content>
+</ion-view>
